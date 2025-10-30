@@ -8,16 +8,17 @@ const Countries = () => {
     useEffect(() => {
         axios
             .get("https://restcountries.com/v2/all?fields=name,capital,population,flag")
-            .then((res) => setPays(res.data))
-            .catch((err) => console.log(err));
+            .then((res) => setPays(res.data));
     }, []);
 
-    console.log(pays);
-
     return (
-        <div className="logo">
-        <h1>Countries</h1>
-        </div>
+        <div>
+            <ul>
+                {pays.map((p) => (
+                    <li>{p.name}</li>
+                ))}
+            </ul>
+    </div>
     );
 };
 
