@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Card from "./Card";
 
 const Countries = () => {
 
@@ -13,9 +14,10 @@ const Countries = () => {
 
     return (
         <div>
-            <ul>
+            <div className="sort-container"></div>
+            <ul className="countries">
                 {pays.map((p) => (
-                    <li>{p.name}</li>
+                    <Card pays={p} />
                 ))}
             </ul>
     </div>

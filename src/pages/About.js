@@ -9,7 +9,6 @@ const About = () => {
             <Logo />
             <Navigation />
             <Countries />
-            <p>Ceci c'est le About</p>
         </div>
     );
 };
